@@ -25,6 +25,8 @@ class ComplexMissionItem : public VisualMissionItem
 public:
     ComplexMissionItem(Vehicle* vehicle, QObject* parent = NULL);
 
+    const ComplexMissionItem& operator=(const ComplexMissionItem& other);
+
     Q_PROPERTY(Fact*                gridAltitude            READ gridAltitude               CONSTANT)
     Q_PROPERTY(bool                 gridAltitudeRelative    MEMBER _gridAltitudeRelative    NOTIFY gridAltitudeRelativeChanged)
     Q_PROPERTY(Fact*                gridAngle               READ gridAngle                  CONSTANT)

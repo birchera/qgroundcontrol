@@ -55,11 +55,13 @@ Rectangle {
     property string _altText:           _statusValid ? QGroundControl.metersToAppSettingsDistanceUnits(_altDifference).toFixed(2) + " " + QGroundControl.appSettingsDistanceUnitsString : " "
     property string _gradientText:      _statusValid ? _gradientPercent.toFixed(0) + "%" : " "
     property string _azimuthText:       _statusValid ? Math.round(_azimuth) : " "
+
     property string _numberShotsText:   _currentSurvey ? _currentMissionItem.cameraShots.toFixed(0) : " "
     property string _coveredAreaText:   _currentSurvey ? QGroundControl.squareMetersToAppSettingsAreaUnits(_currentMissionItem.coveredArea).toFixed(2) + " " + QGroundControl.appSettingsAreaUnitsString : " "
     property string _missionDistanceText: _missionValid ? QGroundControl.metersToAppSettingsDistanceUnits(_missionDistance).toFixed(2) + " " + QGroundControl.appSettingsDistanceUnitsString : " "
     property string _missionTimeText:     _missionValid ? "34min 23s" : " "
     property string _missionMaxTelemetryText:  _missionValid ? QGroundControl.metersToAppSettingsDistanceUnits(_missionMaxTelemetry).toFixed(2) + " " + QGroundControl.appSettingsDistanceUnitsString : " "
+
     property string _hoverDistanceText: _missionValid ? "0.47" + " " + QGroundControl.appSettingsDistanceUnitsString : " "
     property string _cruiseDistanceText: _missionValid ? "30.44" + " " + QGroundControl.appSettingsDistanceUnitsString : " "
     property string _hoverTimeText:     _missionValid ? "4min 02s" : " "
